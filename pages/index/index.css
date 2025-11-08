@@ -1,0 +1,129 @@
+#HeroContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    height: 87vh;
+}
+#footer{
+    text-align: center;
+    color: #B3B3B3;
+    font-family: "Josefin Slab";
+    margin-bottom: 25px;
+}
+#features{
+    padding: 0px 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+h3{
+    text-align: center;
+    font-size: 3.75rem;
+    text-decoration: double;
+    font-family: "Jomhuria";
+    font-weight: 400;
+    margin-bottom: 14px;
+    margin-top: 70px;
+}
+.topIcon > img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+}
+.cardHeaderText{
+    font-size: 2.2rem;
+    text-align: center;
+    font-family: "Jomhuria";
+    margin: 0;
+    padding: 0;
+    max-width: 90%;
+}
+.featureBody{
+    font-size: 1rem;
+    line-height: 20px;
+    font-family: "Josefin Slab";
+    margin: 0;
+    padding-top: 6px;
+    max-width: 90%;
+}
+.featureCard{
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1A1A;
+    max-width: 295px;
+    height: 360px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+.featureCard > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 85%;
+    overflow-y: auto;
+    align-items: center;
+}
+.featureCard:hover{
+    box-shadow: 0px 0px 4px #B3B3B3;
+}
+#pi {
+    height: 260px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 100%;
+    justify-content: center;
+    background-color: white;
+}
+
+#bigPi {
+    height: min-content;
+    line-height: auto;
+    font-size: 16.25rem;
+    padding-right: 12px;
+    padding-bottom: 20px;
+    color: black;
+    margin: 0;
+    border-radius: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Jomhuria";
+    font-size: 7rem;
+    max-width: 90%;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+    font-weight: 400;
+    line-height: 100px;
+}
+
+h4 {
+    font-family: "Jomhuria";
+    font-size: 2.625rem;
+    margin-top: 0;
+    max-width: 80%;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+    font-weight: 400;
+}
+
+.heroIntro {
+    font-family: "Josefin Slab";
+    font-weight: 600;
+    max-width: 80%;
+    font-size: 1.25rem;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px
+}
