@@ -29,6 +29,63 @@ h2{
     font-style: normal;
     padding: 14px;
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    width:50%;
+}
+.input > input{
+    background-color: #333333;
+    border: none;
+    padding-top:12px;
+    padding-bottom: 12px;
+    padding-right: 80px;
+    padding-left: 8px;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Josefin Slab";
+    border-radius: 5px;
+}
+label:not([for="t&c"]){
+    font-family: "Jomhuria";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.bottomLayer{
+    display: flex;
+    width: 50%;
+    gap:54%;
+}
+label[for="t&c"]{
+    font-family: "Josefin Slab";
+}
+#terms{
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+.bottomLayer > div{
+    display: flex;
+    gap:2px
+}
+input:focus{
+    outline: none;
+    border: solid 1px #CCCCCC;
+}
+input[type="checkbox"]{
+    accent-color: #2c2c2c;
+}
 button{
     background-color: #0D0D0D;
     border: solid 1px #B3B3B3;

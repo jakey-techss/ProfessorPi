@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    font-family: "Jomhuria";
+    font-weight: 400;
+    font-size: 64px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+a[href="logIn.html"]{
+    font-family: "Josefin Slab";
+    color:white;
+    text-decoration: underline;
+    font-size: 0.875rem;
+}
