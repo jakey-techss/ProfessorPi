@@ -42,10 +42,86 @@ h2{
     gap:2px;
     width:50%;
 }
-.input > input{
-    background-color: #333333;
+.s-s{
+    display: flex;
+    align-items: center;
+}
+.error{
+    width: 90%;
+    background-color: #DD3333;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    gap:3px;
+    margin: 0;
+    border-radius: 8px;
+    font-family: "Jomhuria";
+    font-size: 22px;
+}
+#errors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    gap:6px;
+    padding: 0;
+    margin: 0;
+}
+.material-icons{
+     background-color: #333333;
     border: none;
+    padding-top:8px;
+    padding-bottom: 8px;
+    padding-right: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Josefin Slab";
+    border-radius: 0px 5px 5px 0px;
+}
+.material-icons:hover{
+    cursor: pointer;
+}
+.input input[id="cPassword"], [id="password"]{
+    background-color: #333333;
     padding-top:12px;
+    padding-bottom: 12px;
+    padding-right: 80px;
+    padding-left: 8px;
+    outline: none;
+    border: none;
+    width: 74%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Josefin Slab";
+    border-radius: 5px 0 0 5px;
+}
+#animation{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0ad3;
+}
+#loadingText{
+    font-family: "Jomhuria";
+    font-size: 2.9rem;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+}
+.input input:not([id="cPassword"], [id="password"]){
+    background-color: #333333;
+    padding-top:12px;
+    border: solid 1px black;
     padding-bottom: 12px;
     padding-right: 80px;
     padding-left: 8px;
@@ -56,7 +132,7 @@ h2{
     font-family: "Josefin Slab";
     border-radius: 5px;
 }
-label:not([for="t&c"]){
+label:not([for="t&c"],[for="Staysign"]){
     font-family: "Jomhuria";
     font-size: 30px;
     font-weight: 400;
@@ -64,10 +140,11 @@ label:not([for="t&c"]){
 }
 .bottomLayer{
     display: flex;
+    flex-direction: column;
     width: 50%;
-    gap:54%;
+    gap:6px;
 }
-label[for="t&c"]{
+label[for="t&c"],[for="Staysign"]{
     font-family: "Josefin Slab";
 }
 #terms{
@@ -79,9 +156,11 @@ label[for="t&c"]{
     display: flex;
     gap:2px
 }
-input:focus{
+input:not([id="cPassword"], [id="password"]):focus{
     outline: none;
-    border: solid 1px #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
 }
 input[type="checkbox"]{
     accent-color: #2c2c2c;

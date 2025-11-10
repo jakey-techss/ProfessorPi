@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="Base.css">
     <link rel="stylesheet" href="pages/signUp/signUp.css">
     <link rel="icon" href="assets/pi-pi-svgrepo-com.svg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore-compat.js"></script>
     <title>Professor Pi | Sign Up</title>
 </head>
 
@@ -18,33 +21,52 @@
         </div>
     </nav>
     <h1>Sign Up</h1>
-        <div class="form">
-            
-            <div class="input">
-                <label for="fullName">Full Name</label>
-                <input name="fullName" type="text" id="fullName" placeholder="John Doe">
+    <div class="form">
+
+        <div class="input">
+            <label for="fullName">Full Name</label>
+            <input name="fullName" type="text" id="fullName" placeholder="John Doe" autocomplete="family-name">
+        </div>
+        <div class="input">
+            <label for="email">Email</label>
+            <input name="email" type="text" id="email" placeholder="example@example.com" autocomplete="email">
+        </div>
+        <div class="input">
+            <label for="password">Password</label>
+            <div class="s-s">
+                <input name="password" type="password" id="password" placeholder="*******************"
+                    autocomplete="off">
+                <span class="material-icons" id="passwordV">
+                    visibility_off
+                </span>
             </div>
-            <div class="input">
-                <label for="email">Email</label>
-                <input name="email" type="text" id="email" placeholder="example@example.com">
+        </div>
+        <div class="input">
+            <label for="cPassword">Confirm Password</label>
+            <div class="s-s">
+                <input name="cPassword" type="password" id="cPassword" placeholder="*******************"
+                    autocomplete="off">
+                <span class="material-icons" id="CpasswordV">
+                    visibility_off
+                </span>
             </div>
-            <div class="input">
-                <label for="password">Password</label>
-                <input name="password" type="password" id="password" placeholder="*******************">
+        </div>
+        <div class="bottomLayer">
+            <div id="terms">
+                <input name="t&c" type="checkbox" id="t&c">
+                <label for="t&c">Agree to terms and conditions</label>
             </div>
-            <div class="input">
-                <label for="cPassword">Confirm Password</label>
-                <input name="cPassword" type="password" id="cPassword" placeholder="*******************">
+            <div id="terms">
+                <input name="Staysign" type="checkbox" id="Staysign">
+                <label for="Staysign">Stay signed in</label>
             </div>
-            <div class="bottomLayer">
-                <div id="terms">
-                    <input name="t&c" type="checkbox" id="t&c">
-                    <label for="t&c">Agree to terms and conditions</label>
-                </div>
-                <a href="logIn.html">Login instead</a>
-            </div>
-            <button style="padding: 6px 120px; font-size: 25px;">Sign Up</button>
+        </div>
+
+        <div id="errors">
+        </div>
+        <button style="padding: 6px 120px; font-size: 25px; margin-top: 20px;" id="signUp">Sign up</button>
     </div>
+    <script src="pages/signUp/signUp.js"></script>
 </body>
 
 </html>
