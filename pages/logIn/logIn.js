@@ -92,6 +92,8 @@ function validateEmail() {
                 removeError("Invalid Email", "email")
                 removeError("Email cannot be empty", "email")
                 removeError("Unable to connect to database, Try again!", "email")
+                Password = document.getElementById("password").value
+                validatePassword()
             }
         }).catch(() => {
             removeError("User does not exist", "email")
@@ -114,6 +116,14 @@ function validatePassword() {
         check.Password = true
         removeError(`Username and password do not match`, "password")
         removeError(`Invalid password`, "password")
+        if (check.Email == true && check.Password == true) {
+        // Add a new document in collection "cities"
+            window.sessionStorage.setItem("userDetails", JSON.stringify({
+                Name: userDetails.Name,
+                Email: Email
+            }))
+        window.location.assign("dashboard.html")
+    }
     }
 
 }
@@ -124,8 +134,6 @@ document.getElementById('login').addEventListener('click', () => {
 
     Email = document.getElementById("email").value
     validateEmail()
-    Password = document.getElementById("password").value
-    validatePassword()
 
 
     document.getElementById("email").addEventListener('input', () => {
@@ -136,14 +144,5 @@ document.getElementById('login').addEventListener('click', () => {
         Password = document.getElementById("password").value
         validatePassword()
     })
-    if (check.Email == true && check.Password == true) {
-        // Add a new document in collection "cities"
-        window.location.assign('dashboard.html')
-        if (document.getElementById("Staysign").checked) {
-            window.sessionStorage.setItem("userDetails", JSON.stringify({
-                Name: userDetails.Name,
-                Email: Email
-            }))
-        }
-    }
+    
 })

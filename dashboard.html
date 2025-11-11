@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="Base.css">
-    <link rel="stylesheet" href="pages/signUp/signUp.css">
+    <link rel="stylesheet" href="pages/dashboard/dashboard.css">
     <link rel="icon" href="assets/pi-pi-svgrepo-com.svg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Professor Pi | Dashboard</title>
@@ -13,13 +13,72 @@
 
 <body>
     <nav>
-        <a href="index.html">
-            <h2>Professor pi</h2>
-        </a>
         <div class="buttons">
-            <a href="signUp.html"><button>Sign Up</button></a>
+            <a href="signUp.html"><button>Graph</button></a>
+            <button>Variables</button>
+            <button>Fomulas</button>
+            <a href="signUp.html"><button>PI AI</button></a>
+        </div>
+        <div class="profile">
+            <hr>
+            <div class="ppHolder">
+                <p id="userName">JF</p>
+            </div>
         </div>
     </nav>
+    <div>
+        <section id="views">
+            <div id="Variables" class="holders">
+                <div class="searchHolder">
+                    <input type="search" placeholder="Search...">
+                </div>
+                <p>Generic</p>
+                <div id="variableList" class="list">
+                    <div class="variable">
+                        <p>L = 4</p>
+                    </div>
+                    <div class="variable">
+                        <p>W = 4</p>
+                    </div>
+                </div>
+                <a class="add">add var</a>
+                <p class="tag">vars</p>
+            </div>
+            <div id="Fomulas" class="holders">
+
+                <div class="searchHolder">
+                    <input type="search" placeholder="Search...">
+                    <span class="material-icons"
+                        style="width: min-content; font-size: 24px; text-align: end; margin: 0; padding: 3px; border-radius: 100%;">filter_list</span>
+                </div>
+                <p>Most Popular</p>
+                <div id="formulaList" class="list">
+                    <div class="formula">Area of quadrilateral</div>
+                    <div class="formula">Quadractic formula</div>
+                </div>
+                <a class="add">add formula</a>
+                <p class="tag">Formulas</p>
+            </div>
+        </section>
+        <section id="main">
+            <div id="workspace">
+                <div class="workspaceInput">
+                    <input>
+                </div>
+            </div>
+            <hr>
+            <div id="enters">
+                <div class="inputRightAlign">
+                    <div class="searchHolder">
+                        <input type="search" placeholder="Search...">
+                        <span class="material-icons"
+                            style="width: min-content; font-size: 24px; text-align: end; margin: 0; padding: 3px; border-radius: 100%;">filter_list</span>
+                    </div>
+                    <div class="keyboard"></div>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="pages/dashboard/dashboard.js"></script>
 </body>
 
